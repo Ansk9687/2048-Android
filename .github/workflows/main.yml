@@ -24,6 +24,10 @@ jobs:
       - name: Run Lint
         run: ./gradlew lintDebug
 
+    permissions:
+      checks: write
+      contents: read
+
       - name: Upload html test report 
         uses: actions/upload-artifact@v2
         with:
