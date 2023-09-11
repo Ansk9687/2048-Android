@@ -24,13 +24,15 @@ jobs:
       - name: Run Lint
         run: ./gradlew lintDebug
 
-    permissions:
-      checks: write
-      contents: read
-
       - name: Upload html test report 
         uses: actions/upload-artifact@v2
         with:
           name: report.html
           path: app/build/reports/lint-results-debug.html
+
+
+
+permissions:
+        checks: write
+        contents: read
   
